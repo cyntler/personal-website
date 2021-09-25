@@ -1,12 +1,11 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
+import { Seo } from '../components/Seo/Seo';
 
 const HomePage: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Dc</title>
-      </Head>
+      <Seo title="Homepage" />
       <div>homepage</div>
     </>
   );
