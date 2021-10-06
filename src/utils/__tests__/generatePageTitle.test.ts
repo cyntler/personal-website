@@ -6,4 +6,12 @@ describe('utils/generatePageTitle', () => {
 
     expect(result).toBe('Dc');
   });
+
+  it('returns valid title with name parameter', () => {
+    const name = 'Test';
+
+    const result = generatePageTitle(name);
+
+    expect(result).toBe('Dc — Test');
+  });
 });
