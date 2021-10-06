@@ -1,1 +1,2 @@
-export const generatePageTitle = (name?: string) => `Dc ${name && `— ${name}`}`;
+export const generatePageTitle = (name?: string) =>
+  `Dc${name ? ` — ${name}` : ''}`;
