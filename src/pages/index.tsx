@@ -1,6 +1,5 @@
 import { NextPage } from 'next';
-import Head from 'next/head';
-import { Seo } from '../components/Seo/Seo';
+import { Seo } from 'src/components/Seo/Seo';
 
 const HomePage: NextPage = () => {
   return (
