@@ -11,7 +11,7 @@
   "private": true,
   "scripts": {
     "start": "next dev",
-    "build": "next build",
+    "build": "next build && next export -o dist/",
     "serve": "next start",
     "lint": "next lint",
     "test": "jest",
