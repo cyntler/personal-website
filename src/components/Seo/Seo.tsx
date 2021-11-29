@@ -1,5 +1,6 @@
 import { FunctionComponent } from 'react';
 import Head from 'next/head';
+
 import { generatePageTitle } from 'src/utils/generatePageTitle';
 
 interface SeoProps {
