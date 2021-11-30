@@ -1,7 +1,7 @@
-import { FunctionComponent } from 'react';
 import Head from 'next/head';
+import { FunctionComponent } from 'react';
 
-import { generatePageTitle } from 'src/utils/generatePageTitle';
+import { generatePageTitle } from '~/utils/generatePageTitle';
 
 interface SeoProps {
   title?: string;

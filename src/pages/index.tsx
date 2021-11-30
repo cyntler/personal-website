@@ -1,15 +1,13 @@
 import { NextPage } from 'next';
 
-import { Seo } from 'src/components/Seo/Seo';
-import { Layout } from '~/components/Layout/Layout';
+import { Seo } from 'src/components/Seo';
+import { Layout } from '~/components/Layout';
 
-const IndexPage: NextPage = () => {
-  return (
-    <>
-      <Seo title="Homepage" />
-      <Layout>homepage</Layout>
-    </>
-  );
-};
+export const IndexPage: NextPage = () => (
+  <>
+    <Seo title="Homepage" />
+    <Layout>homepage</Layout>
+  </>
+);
 
 export default IndexPage;

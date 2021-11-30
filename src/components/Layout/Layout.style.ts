@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-export const Container = styled.main``;
+export const LayoutContainer = styled.main``;
 
-export const Content = styled.div`
+export const LayoutContent = styled.div`
   padding: var(--spacing-medium);
 `;
