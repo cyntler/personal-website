@@ -1,10 +1,10 @@
 import { FunctionComponent } from 'react';
 
-import { Container } from './Header.style';
-import { Logo } from '~/components/Logo/Logo';
+import { Logo } from '~/components/Logo';
+import { HeaderContainer } from './Header.style';
 
 export const Header: FunctionComponent = () => (
-  <Container>
+  <HeaderContainer>
     <Logo asLink="/" />
-  </Container>
+  </HeaderContainer>
 );

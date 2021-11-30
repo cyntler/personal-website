@@ -1,7 +1,9 @@
 import { AppProps } from 'next/app';
-import { GlobalStyle } from '../components/GlobalStyle';
+import { FunctionComponent } from 'react';
 
-const App = ({ Component, pageProps }: AppProps) => (
+import { GlobalStyle } from '~/components/GlobalStyle';
+
+export const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => (
   <>
     <GlobalStyle />
     <Component {...pageProps} />
