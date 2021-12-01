@@ -6,5 +6,5 @@ import { Header } from '../Header';
 test('render header logo', () => {
   render(<Header />);
 
-  expect(screen.getAllByAltText(APP_LOGO_ALT)).toBeDefined();
+  expect(screen.getByAltText(APP_LOGO_ALT)).toBeInTheDocument();
 });

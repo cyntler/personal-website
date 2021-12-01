@@ -12,5 +12,5 @@ test('return title with name parameter', () => {
 
   const result = generatePageTitle(name);
 
-  expect(result).toBe(`${APP_NAME} — Test`);
+  expect(result).toBe(`${APP_NAME} — ${name}`);
 });
