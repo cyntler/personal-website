@@ -5,7 +5,7 @@ import { Layout } from '../Layout';
 test('render layout header', () => {
   render(<Layout />);
 
-  expect(document.querySelector('header')).toBeDefined();
+  expect(document.querySelector('header')).toBeInTheDocument();
 });
 
 test('render layout children', () => {
@@ -13,5 +13,5 @@ test('render layout children', () => {
 
   render(<Layout>{children}</Layout>);
 
-  expect(screen.getByText(children)).toBeDefined();
+  expect(screen.getByText(children)).toBeInTheDocument();
 });

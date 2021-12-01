@@ -8,7 +8,7 @@ beforeEach(() => {});
 test('render logo image', () => {
   render(<Logo />);
 
-  expect(screen.getByAltText(APP_LOGO_ALT)).toBeDefined();
+  expect(screen.getByAltText(APP_LOGO_ALT)).toBeInTheDocument();
 });
 
 test('render logo image with link', () => {
@@ -16,7 +16,7 @@ test('render logo image with link', () => {
 
   render(<Logo asLink={link} />);
 
-  expect(document.querySelector('a')).toBeDefined();
+  expect(document.querySelector('a')).toBeInTheDocument();
   expect(document.querySelector('a')?.getAttribute('href')).toBe(link);
-  expect(screen.getByAltText(APP_LOGO_ALT)).toBeDefined();
+  expect(screen.getByAltText(APP_LOGO_ALT)).toBeInTheDocument();
 });
