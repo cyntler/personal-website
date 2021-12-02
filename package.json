@@ -31,7 +31,8 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^12.1.2",
-    "babel-jest": "^27.3.1",
+    "@types/jest": "^27.0.3",
+    "babel-jest": "^27.4.2",
     "babel-plugin-styled-components": "^1.13.3",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
