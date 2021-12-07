@@ -3,10 +3,9 @@ import { useIntl } from 'react-intl';
 export const useTranslation = () => {
   const { formatMessage } = useIntl();
 
-  return (
-    key: string,
-    values?: Parameters<typeof formatMessage>[1],
-  ): string => {
+  type FormatMessageValuesArgument = Parameters<typeof formatMessage>[1];
+
+  return (key: string, values?: FormatMessageValuesArgument): string => {
     const message = formatMessage(
       {
         id: key,
