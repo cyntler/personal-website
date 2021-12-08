@@ -1,17 +1,10 @@
 import { useRouter } from 'next/router';
 import { useMemo } from 'react';
 
-import en from '~/locales/en.json';
-import pl from '~/locales/pl.json';
+export type LocaleMessages = Record<string, Record<string, string>>;
 
-type LocaleMessagesKey = keyof typeof localeMessages;
-
-const localeMessages = {
-  en,
-  pl,
-};
-
-export const useLocale = () => {
+export const useLocale = (localeMessages: LocaleMessages) => {
+  type LocaleMessagesKey = keyof typeof localeMessages;
   const { locale = '', locales, defaultLocale = 'en' } = useRouter();
 
   const messages = useMemo(() => {
@@ -26,7 +19,7 @@ export const useLocale = () => {
       ...defaultLocaleMessages,
       ...localeMessages[locale as LocaleMessagesKey],
     };
-  }, [locale, defaultLocale]);
+  }, [locale, defaultLocale, localeMessages]);
 
   return {
     locale,
