@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
   :root {
     --font-family-primary: "Lato", sans-serif;
+    --spacing-main: 4vw;
     --spacing-small: 8px;
     --spacing-medium: 16px;
     --spacing-big: 32px;
