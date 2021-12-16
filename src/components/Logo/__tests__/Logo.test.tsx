@@ -3,8 +3,6 @@ import { render, screen } from '@testing-library/react';
 import { APP_LOGO_ALT } from '~/constants';
 import { Logo } from '../Logo';
 
-beforeEach(() => {});
-
 test('render logo image', () => {
   render(<Logo />);
 
