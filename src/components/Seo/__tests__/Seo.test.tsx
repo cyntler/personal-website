@@ -7,9 +7,7 @@ import { Seo } from '../Seo';
 
 jest.mock('next/head', () => ({
   __esModule: true,
-  default: ({ children }: { children: ReactNode }) => {
-    return <>{children}</>;
-  },
+  default: ({ children }: { children: ReactNode }) => children,
 }));
 
 beforeEach(() => {

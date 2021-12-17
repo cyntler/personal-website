@@ -22,7 +22,7 @@ export const Logo: FunctionComponent<LogoProps> = ({ size, asLink }) => {
   if (asLink) {
     return (
       <Link href={asLink}>
-        <a>{renderLogo}</a>
+        <a href={asLink}>{renderLogo}</a>
       </Link>
     );
   }
