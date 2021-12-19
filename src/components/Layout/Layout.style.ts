@@ -3,5 +3,5 @@ import styled from 'styled-components';
 export const LayoutContainer = styled.main``;
 
 export const LayoutContent = styled.div`
-  padding: var(--spacing-medium);
+  padding: 0 var(--spacing-main);
 `;
