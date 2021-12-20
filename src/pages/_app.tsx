@@ -1,10 +1,18 @@
 import { AppProps } from 'next/app';
-import { GlobalStyle } from '../components/GlobalStyle';
+import { FunctionComponent } from 'react';
 
-const App = ({ Component, pageProps }: AppProps) => (
+import { GlobalStyle } from '~/components/GlobalStyle';
+import { Providers } from '~/components/Providers';
+import { getLocaleMessages } from '~/utils/getLocaleMessages';
+
+const localeMessages = getLocaleMessages();
+
+export const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => (
   <>
     <GlobalStyle />
-    <Component {...pageProps} />
+    <Providers localeMessages={localeMessages}>
+      <Component {...pageProps} />
+    </Providers>
   </>
 );
 

@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "My own website.",
   "keywords": [
     "personal",
@@ -11,7 +11,7 @@
   "private": true,
   "scripts": {
     "start": "next dev",
-    "build": "next build",
+    "build": "next build && next export -o dist/",
     "serve": "next start",
     "lint": "next lint",
     "test": "jest",
@@ -21,24 +21,34 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@types/react": "^17.0.34",
-    "@types/styled-components": "^5.1.15",
-    "next": "12.0.3",
+    "@types/react": "^17.0.37",
+    "@types/styled-components": "^5.1.18",
+    "next": "12.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-intl": "^5.23.0",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.15.0",
+    "@svgr/webpack": "^6.1.2",
+    "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
-    "babel-jest": "^27.3.1",
-    "babel-plugin-styled-components": "^1.13.3",
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@types/jest": "^27.0.3",
+    "babel-jest": "^27.4.5",
+    "babel-plugin-styled-components": "^2.0.2",
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb": "^19.0.2",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-config-next": "12.0.7",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^27.3.1",
-    "prettier": "^2.4.1",
-    "typescript": "4.4.4"
+    "jest": "^27.4.5",
+    "prettier": "^2.5.1",
+    "typescript": "4.5.4"
   }
 }

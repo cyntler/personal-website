@@ -1,6 +1,15 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+  :root {
+    --font-family-primary: "Lato", sans-serif;
+    --spacing-main: 4vw;
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-big: 32px;
+    --spacing-huge: 48px;
+  }
+
   * {
     box-sizing: border-box;
     --webkit-tap-highlight-color: transparent;
@@ -10,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    min-height: 100%;    
+    min-height: 100%;
   }
 
   html {
@@ -18,7 +27,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: "Lato", sans-serif;
+    font-family: var(--font-family-primary);
     font-weight: 400;
   }
 

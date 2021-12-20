@@ -1,15 +1,16 @@
+import { APP_NAME } from '~/constants';
 import { generatePageTitle } from '../generatePageTitle';
 
-test('returns valid title without name parameter', () => {
+test('return title without name parameter', () => {
   const result = generatePageTitle();
 
-  expect(result).toBe('Dc');
+  expect(result).toBe(APP_NAME);
 });
 
-test('returns valid title with name parameter', () => {
+test('return title with name parameter', () => {
   const name = 'Test';
 
   const result = generatePageTitle(name);
 
-  expect(result).toBe('Dc — Test');
+  expect(result).toBe(`${APP_NAME} — ${name}`);
 });

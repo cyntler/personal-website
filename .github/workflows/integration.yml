@@ -1,0 +1,35 @@
+name: Integration
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Read .nvmrc file
+        run: echo NVMRC=`cat .nvmrc` >> $GITHUB_ENV
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2.4.1
+        with:
+          node-version: ${{ env.NVMRC }}
+
+      - name: Install packages
+        run: npm i
+
+      - name: Run lint
+        run: npm run lint
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Run Prettier check
+        run: npm run check-prettier
+
+      - name: Run TS types check
+        run: npm run check-types
