@@ -7,19 +7,13 @@ interface ErrorProps {
 }
 
 export const Error: NextPage<ErrorProps> = ({ statusCode }) => (
-  <Layout>Error {statusCode}</Layout>
+  <Layout>
+    <h1>Error {statusCode}</h1>
+  </Layout>
 );
 
-Error.getInitialProps = ({ res, err }) => {
-  let statusCode = 404;
-
-  if (res) {
-    statusCode = res.statusCode;
-  } else if (err?.statusCode) {
-    statusCode = err.statusCode;
-  }
-
-  return { statusCode };
-};
+Error.getInitialProps = ({ res, err }) => ({
+  statusCode: res?.statusCode ?? err?.statusCode ?? 404,
+});
 
 export default Error;
