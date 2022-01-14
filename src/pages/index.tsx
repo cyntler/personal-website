@@ -1,4 +1,4 @@
-import { NextPage, NextPageContext } from 'next';
+import { GetStaticProps, NextPage } from 'next';
 
 import { Seo } from '~/components/Seo';
 import { Layout } from '~/components/Layout';
@@ -10,12 +10,14 @@ export const IndexPage: NextPage = () => {
   return (
     <>
       <Seo title={t('homepage_title')} />
-      <Layout>{t('homepage_title')}</Layout>
+      <Layout>
+        <h1>{t('homepage_title')}</h1>
+      </Layout>
     </>
   );
 };
 
-export const getStaticProps = async (context: NextPageContext) => ({
+export const getStaticProps: GetStaticProps = async (context) => ({
   props: {
     locale: context.locale,
   },
