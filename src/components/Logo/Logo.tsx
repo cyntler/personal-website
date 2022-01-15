@@ -31,5 +31,5 @@ export const Logo: FunctionComponent<LogoProps> = ({ size, asLink }) => {
 };
 
 Logo.defaultProps = {
-  size: 40,
+  size: 30,
 };
