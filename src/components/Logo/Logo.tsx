@@ -1,8 +1,8 @@
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
 
-import { APP_LOGO_ALT } from '~/constants';
-import { StyledLogoImage } from './Logo.style';
+import { APP_LOGO_ALT, APP_LOGO_IMG_SRC } from '~/constants';
+import { LogoImage } from './Logo.style';
 
 interface LogoProps {
   size?: number;
@@ -11,8 +11,8 @@ interface LogoProps {
 
 export const Logo: FunctionComponent<LogoProps> = ({ size, asLink }) => {
   const renderLogo = (
-    <StyledLogoImage
-      src="/logo.svg"
+    <LogoImage
+      src={APP_LOGO_IMG_SRC}
       alt={APP_LOGO_ALT}
       width={size}
       height={size}

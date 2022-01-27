@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import Image from 'next/image';
 
-export const StyledLogoImage = styled(Image)`
+export const LogoImage = styled.img`
   user-select: none;
   -webkit-user-drag: none;
 `;
