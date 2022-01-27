@@ -1,16 +1,14 @@
-import { useIntl } from 'react-intl';
+import { useTranslation as useNextExportTranslation } from 'next-export-i18n';
+
+interface UseTranslationValues {
+  [key: string]: unknown;
+}
 
 export const useTranslation = () => {
-  const { formatMessage } = useIntl();
-  type FormatMessageValuesArgument = Parameters<typeof formatMessage>[1];
+  const { t } = useNextExportTranslation();
 
-  return (key: string, values?: FormatMessageValuesArgument): string => {
-    const message = formatMessage(
-      {
-        id: key,
-      },
-      values,
-    );
+  return (key: string, values?: UseTranslationValues): string => {
+    const message = t(key, values);
 
     if (typeof message === 'string') {
       return message;

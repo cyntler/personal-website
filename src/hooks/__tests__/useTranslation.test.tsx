@@ -4,27 +4,25 @@ import { FC } from 'react';
 import { Providers } from '~/components/Providers';
 import { useTranslation } from '../useTranslation';
 
-const localeNameMock = 'locale-name';
+const translationsMock = {
+  test_translation: 'Test',
+};
 
-jest.mock('next/router', () => ({
-  useRouter() {
+jest.mock('next-export-i18n', () => ({
+  useTranslation() {
     return {
-      locale: localeNameMock,
-      locales: [localeNameMock],
-      defaultLocale: localeNameMock,
+      t(key: string) {
+        if (translationsMock[key as keyof typeof translationsMock]) {
+          return translationsMock[key as keyof typeof translationsMock];
+        }
+
+        return key;
+      },
     };
   },
 }));
 
-const localeMessages = {
-  [localeNameMock]: {
-    test_translation: 'Test',
-  },
-};
-
-const Wrapper: FC = ({ children }) => (
-  <Providers localeMessages={localeMessages}>{children}</Providers>
-);
+const Wrapper: FC = ({ children }) => <Providers>{children}</Providers>;
 
 test('return correct translation', () => {
   const { result } = renderHook(() => useTranslation(), {
