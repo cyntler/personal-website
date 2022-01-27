@@ -17,7 +17,7 @@ jest.mock('next/router', () => ({
 test('render children of Providers component', () => {
   const children = 'Lorem ipsum';
 
-  render(<Providers localeMessages={{}}>{children}</Providers>);
+  render(<Providers>{children}</Providers>);
 
   expect(screen.getByText(children)).toBeInTheDocument();
 });
