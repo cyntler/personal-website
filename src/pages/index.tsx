@@ -1,4 +1,4 @@
-import { GetStaticProps, NextPage } from 'next';
+import { NextPage } from 'next';
 
 import { Seo } from '~/components/Seo';
 import { Layout } from '~/components/Layout';
@@ -16,11 +16,5 @@ export const IndexPage: NextPage = () => {
     </>
   );
 };
-
-export const getStaticProps: GetStaticProps = async (context) => ({
-  props: {
-    locale: context.locale,
-  },
-});
 
 export default IndexPage;
