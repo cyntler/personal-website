@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const LayoutContainer = styled.main`
   width: 100%;
-  max-width: 700px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 var(--spacing-main);
 `;
