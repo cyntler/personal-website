@@ -4,9 +4,9 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { Seo } from '~/components/Seo';
 import { Layout } from '~/components/Layout';
 import { POSTS_MDX_DIR } from '~/constants';
-import { getMdxDataByFileName } from '~/nextUtils/getMdxDataByFileName';
-import { getDirectoryFileNames } from '~/nextUtils/getDirectoryFileNames';
-import { arrayToStaticPaths } from '~/nextUtils/arrayToStaticPaths';
+import { getMdxDataByFileName } from '~/staticUtils/getMdxDataByFileName';
+import { getDirectoryFileNames } from '~/staticUtils/getDirectoryFileNames';
+import { arrayToStaticPaths } from '~/staticUtils/arrayToStaticPaths';
 
 interface PostViewPageProps {
   slug: string;
