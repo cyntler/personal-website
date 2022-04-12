@@ -1,5 +1,7 @@
 import { FunctionComponent } from 'react';
 
-export const Providers: FunctionComponent = ({ children }) => (
-  <div>{children}</div>
-);
+import { PropsWithChildrenOnly } from '~/constants';
+
+export const Providers: FunctionComponent<PropsWithChildrenOnly> = ({
+  children,
+}) => <div>{children}</div>;

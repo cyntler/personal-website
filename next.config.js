@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
+const { withLocalesConfig } = require('next-locales/server');
+
+module.exports = withLocalesConfig({
   reactStrictMode: true,
-};
+});

@@ -1,10 +1,10 @@
-import { AppProps } from 'next/app';
-import { FunctionComponent } from 'react';
+import { AppProps as CustomAppProps } from 'next/app';
+import { withLocales } from 'next-locales';
 
 import { GlobalStyle } from '~/components/GlobalStyle';
 import { Providers } from '~/components/Providers';
 
-export const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => (
+const CustomApp = ({ Component, pageProps }: CustomAppProps) => (
   <>
     <GlobalStyle />
     <Providers>
@@ -13,4 +13,4 @@ export const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => (
   </>
 );
 
-export default App;
+export default withLocales(CustomApp);

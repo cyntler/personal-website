@@ -1,0 +1,8 @@
+homepage:
+  title: Główna
+
+about:
+  title: O mnie
+
+error:
+  title: Błąd {{ statusCode }}

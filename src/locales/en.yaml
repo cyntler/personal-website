@@ -1,0 +1,8 @@
+homepage:
+  title: Homepage
+
+about:
+  title: About me
+
+error:
+  title: Error {{ statusCode }}
