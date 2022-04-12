@@ -3,7 +3,7 @@ import { join } from 'path';
 import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
 
-export const getMdxDataByFileName = async (
+export const readMdxByFileName = async (
   directoryPath: string,
   filename: string,
 ) => {

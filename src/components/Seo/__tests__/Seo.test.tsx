@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import { ReactNode } from 'react';
 
 import { APP_NAME } from '~/constants';
-import { getMetaTagContentByName } from '~/utils/getMetaTagContentByName';
+import { getMetaTagContentByName } from '~/testUtils/getMetaTagContentByName';
 import { Seo } from '../Seo';
 
 jest.mock('next/head', () => ({

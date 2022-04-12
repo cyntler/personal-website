@@ -36,3 +36,7 @@ yarn-error.log*
 
 # TS
 *.tsbuildinfo
+
+# Yalc
+.yalc
+yalc.lock
