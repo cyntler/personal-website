@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import {
+import Document, {
   DocumentContext,
   DocumentProps,
   Head,
@@ -56,15 +56,17 @@ const CustomDocument = ({
   </Html>
 );
 
-CustomDocument.getInitialProps = async ({ renderPage }: DocumentContext) => {
+CustomDocument.getInitialProps = async (ctx: DocumentContext) => {
+  const initialProps = await Document.getInitialProps(ctx);
   const sheet = new ServerStyleSheet();
 
+  const { renderPage } = ctx;
   const page = renderPage(
     (Component) => (props) => sheet.collectStyles(<Component {...props} />),
   );
 
   const styleElements = sheet.getStyleElement();
-  return { ...page, styleElements };
+  return { ...initialProps, ...page, styleElements };
 };
 
 export default CustomDocument;
