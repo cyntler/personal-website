@@ -8,7 +8,7 @@ import Document, {
   NextScript,
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
-import { getLangAttrValue } from 'next-locales/server';
+import { getHtmlLocaleAttributes } from 'next-locales/server';
 
 interface CustomDocumentProps {
   styleElements: ReactElement[];
@@ -18,7 +18,7 @@ const CustomDocument = ({
   styleElements,
   __NEXT_DATA__,
 }: DocumentProps & CustomDocumentProps) => (
-  <Html lang={getLangAttrValue(__NEXT_DATA__)}>
+  <Html {...getHtmlLocaleAttributes(__NEXT_DATA__)}>
     <Head>
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta name="theme-color" content="#ffffff" />

@@ -1,3 +1,6 @@
+__config:
+  dir: auto
+
 homepage:
   title: Homepage
 
