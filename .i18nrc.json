@@ -1,5 +1,5 @@
 {
   "localesDir": "./src/locales",
   "locales": ["en", "pl"],
-  "defaultLocale": "en"
+  "defaultLocale": "pl"
 }
