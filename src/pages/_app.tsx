@@ -3,7 +3,7 @@ import { FunctionComponent } from 'react';
 import { withLocales } from 'next-locales';
 
 import { Providers } from '~/components/Providers';
-import '~/globals.css';
+import '~/tailwind.css';
 
 const CustomApp = ({ Component, pageProps }: CustomAppProps) => (
   <Providers>
