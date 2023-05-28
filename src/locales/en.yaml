@@ -1,6 +1,18 @@
 __config:
   dir: auto
 
+common:
+  headname: cyntler.
+  headline: Software Developer, programming enthusiast, aspiring minimalist.
+
+navigation:
+  home: Home
+  about: About me
+  thoughts: Throughts
+  projects: Projects
+  resume: CV / Resume
+  contact: Contact
+
 homepage:
   title: Homepage
 

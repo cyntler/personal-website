@@ -1,22 +1,15 @@
+import { Link } from 'next-locales';
 import { FunctionComponent } from 'react';
-import Link from 'next/link';
 
 import { APP_LOGO_ALT, APP_LOGO_IMG_SRC } from '~/constants';
-import { LogoImage } from './Logo.style';
 
 interface LogoProps {
-  size?: number;
   asLink?: string;
 }
 
-export const Logo: FunctionComponent<LogoProps> = ({ size, asLink }) => {
+export const Logo: FunctionComponent<LogoProps> = ({ asLink }) => {
   const renderLogo = (
-    <LogoImage
-      src={APP_LOGO_IMG_SRC}
-      alt={APP_LOGO_ALT}
-      width={size}
-      height={size}
-    />
+    <img src={APP_LOGO_IMG_SRC} alt={APP_LOGO_ALT} className="block w-9 h-9" />
   );
 
   if (asLink) {
@@ -24,8 +17,4 @@ export const Logo: FunctionComponent<LogoProps> = ({ size, asLink }) => {
   }
 
   return renderLogo;
-};
-
-Logo.defaultProps = {
-  size: 30,
 };

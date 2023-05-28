@@ -4,7 +4,6 @@ import {
   withLocalesStaticProps,
 } from 'next-locales/server';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
-import { useTranslation } from 'next-locales';
 
 import { Seo } from '~/components/Seo';
 import { Layout } from '~/components/Layout';
@@ -22,21 +21,15 @@ interface PostViewPageProps {
 const PostViewPage: NextPage<PostViewPageProps> = ({
   source,
   frontMatter: { title },
-}) => {
-  const { t } = useTranslation();
-
-  return (
-    <>
-      <Seo title={title} />
-      <Layout>
-        <h1>
-          {title} {t('homepage.title')}
-        </h1>
-        <MDXRemote {...source} />
-      </Layout>
-    </>
-  );
-};
+}) => (
+  <>
+    <Seo title={title} />
+    <Layout>
+      <h1>{title}</h1>
+      <MDXRemote {...source} />
+    </Layout>
+  </>
+);
 
 export const getStaticProps: GetStaticProps = withLocalesStaticProps(
   async ({ params }) => {

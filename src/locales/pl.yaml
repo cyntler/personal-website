@@ -1,3 +1,18 @@
+__config:
+  dir: auto
+
+common:
+  headname: cyntler.
+  headline: Software Developer, entuzjasta programowania, aspirujący minimalista.
+
+navigation:
+  home: Główna
+  about: O mnie
+  thoughts: Przemyślenia
+  projects: Projekty
+  resume: CV / Resume
+  contact: Kontakt
+
 homepage:
   title: Główna
 

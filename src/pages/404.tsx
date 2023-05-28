@@ -1,6 +1,7 @@
 import { useTranslation } from 'next-locales';
 import { withLocalesStaticProps } from 'next-locales/server';
 
+import { Layout } from '~/components/Layout';
 import { Seo } from '~/components/Seo';
 
 const Custom404 = () => {
@@ -11,7 +12,9 @@ const Custom404 = () => {
   return (
     <>
       <Seo title={errorTitle} />
-      <div>{errorTitle}</div>
+      <Layout>
+        <div>{errorTitle}</div>
+      </Layout>
     </>
   );
 };
